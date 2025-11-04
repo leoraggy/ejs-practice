@@ -6,10 +6,14 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-	const person = { name: "Donald Duck", occupation: "plumber" };
-	res.render("home", { person });
+  const person = {
+    name: "Donald Duck",
+    occupation: "plumber",
+    favoriteColor: "blue",
+  };
+  res.render("home", { person });
 });
 
 app.listen(PORT, () => {
-	console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
