@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EJS Practice</title>
-  </head>
-  <body>
-    <h1>EJS Practice</h1>
-    <h2>Hello, <%= person.name %></h2>
-    <h3>Occupation: <%= person.occupation %></h3>
-    <% if (person.occupation === 'plumber') { %>
-    <p>You work with pipes!</p>
-    <% } else { %>
-    <p>That's an interesting job!</p>
-    <% } %> <% if(person.favoriteColor === "blue") { %>
-    <p>That's my favorite color too!</p>
-    <% }else { %>
-    <p>That's a good color also!</p>
-    <% } %>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EJS Practice</title>
+	</head>
+	<body>
+		<!-- Include partials -->
+		<%- include('partials/header') %>
+		<main>
+			<h2>Welcome!</h2>
+			<h1>EJS Practice</h1>
+			<h2>Hello, <%= person.name %></h2>
+			<h3>Occupation: <%= person.occupation %></h3>
+			<% if (person.occupation === 'plumber') { %>
+			<p>You work with pipes!</p>
+			<% } else { %>
+			<p>That's an interesting job!</p>
+			<% } %> <% if(person.favoriteColor === "blue") { %>
+			<p>That's my favorite color too!</p>
+			<% }else { %>
+			<p>That's a good color also!</p>
+			<% } %>
+		</main>
+		<%- include('partials/footer') %>
+	</body>
 </html>
